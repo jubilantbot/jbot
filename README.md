@@ -1,2 +1,2 @@
 # jbot
-Testing Jankinsfile
+Testing Jenkinsfile
