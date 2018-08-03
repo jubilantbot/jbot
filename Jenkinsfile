@@ -6,6 +6,14 @@ pipeline {
                 sh 'echo "Fail!"; exit 1'
             }
         }
+        stage('Deploy') {
+            steps {
+                when {
+                  expression {
+                  currentBuild.result == null || currentBuild.result == 'SUCCESS' 
+              }
+            }
+        }
     }
     post {
         always {
