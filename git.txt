@@ -1,0 +1,45 @@
+Sample of Git Workflow for Small Team
+MASTER branch should be Deployable 
+(it’s supposed to be deployed and built by anyone at any time, NO ERROR)
+
+Create Branch from master, let’s called it develop branch 
+(This branch will contain the complete history of the project)
+
+*** below is example of creating branch ‘develop’ locally and push it into central repo
+
+        git branch develop
+        git push -u origin develop  
+
+(following those code, means now we have a branch called ‘develop’ on central repo)
+
+3. Then all developers should clone the central repo and create a tracking branch for develop:
+
+        git clone pathtothecentralrepo
+        git checkout -b develop origin/develop
+
+If you want to develop on your own task, branch it out from develop
+
+        git checkout -b your-awesome-feature develop
+
+4. Finish working on your-awesome-feature branch?! merge back to develop branch,
+but before doing that make sure code in your-awesome-feature 
+branch does not conflict with the develop branch, if yes resolve it .
+
+        git pull origin develop
+        git checkout develop
+            
+        git merge your-awesome-feature
+        git push
+
+        git branch -d your-awesome-feature **deleted your branch, not necessary but it's good practice
+
+5. Ready to merge it to Master?? TAG and PULL REQUEST
+
+        git checkout master
+        git merge --no-ff develop
+
+— — — – — — — — - — — — — — — — — — — — — — — — — —
+
+6. ***When we do hot fix, always create a branch from Master, fix it then merge back into
+
+Ref. https://datasift.github.io/gitflow/IntroducingGitFlow.html
