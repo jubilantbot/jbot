@@ -3,6 +3,7 @@
     {
       "pattern": "*.md",
       "target": "generic-local/"
+     
     }
- ]
+  ]
 }
