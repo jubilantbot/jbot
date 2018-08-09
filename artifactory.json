@@ -1,7 +1,7 @@
 {
   "files": [
     {
-      "pattern": "bazinga/*froggy*.zip",
+      "pattern": "*.md",
       "target": "generic-local/"
     }
  ]
