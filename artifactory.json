@@ -1,0 +1,9 @@
+{
+  "files": [
+    {
+      "pattern": "*/*",
+      "target": "generic-local/",
+      "regexp": "true",
+    }
+  ]
+}
