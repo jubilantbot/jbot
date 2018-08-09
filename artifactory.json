@@ -1,9 +1,8 @@
 {
   "files": [
     {
-      "pattern": "*/*",
-      "target": "generic-local/",
-      "regexp": "true",
+      "pattern": "bazinga/*froggy*.zip",
+      "target": "generic-local/"
     }
-  ]
+ ]
 }
